@@ -1,0 +1,39 @@
+<div [hidden]="headerVisible" id="header"></div>
+
+<p>registrando-usuario works!</p>
+
+<h1>La Casa de los Sabores</h1>
+
+<p>"nav de botones"</p>
+<button [routerLink]="['/']">Ver IniciandoSesion</button>
+<button [routerLink]="['/RegistrandoUsuario']">Ver RegistrandoUsuario</button>
+<button [routerLink]="['/PReserva']">Ver PReserva</button>
+<button [routerLink]="['/ConReserva']">Ver ConReserva</button>
+<button [routerLink]="['/CanReserva']">Ver CanReserva</button>
+<button [routerLink]="['/GReservas']">Ver GReservas</button>
+<button [routerLink]="['/Confirmacion']">Ver Confirmacion</button>
+<button [routerLink]="['/Ocupacion']">Ver Ocupacion</button>
+
+<ul>
+    <li *ngFor="let RegistrandoUsuario of RegistrandoUsuario">{{ RegistrandoUsuario.name}}</li>
+</ul>
+
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>Color</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let RegistrandoUsuario of RegistrandoUsuario">
+            <td>{{RegistrandoUsuario.name }}</td>
+            <td>{{RegistrandoUsuario.color }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="this.hideShowHeader()">Display/Hide Header</button>
+
+<p>Funcionalidad: Permitir a los usuarios iniciar sesión en el sistema.</p>
+<p>Datos: Campo de correo electrónico y campo de contraseña.</p>
+<p>Acceso: Todos los usuarios del sistema.</p>
+    
